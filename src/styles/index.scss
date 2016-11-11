@@ -1,11 +1,14 @@
-$stylesDir = './styles';
+$stylesDir: './styles';
 
-@import "common";
+@import 'mixins/_mixins';
 
-@import "shared";
+@import 'common/_fonts';
+@import 'common/_reset';
 
-@import "pages";
+@import 'shared/_buttons';
+@import 'shared/_links';
 
-@import "modules";
+@import 'modules/_header';
+@import 'modules/_footer';
 
-@import "components";
+@import 'components/';
