@@ -70,10 +70,11 @@ gulp.task('clean:build', function () {
 gulp.task('build',
     [
         'clean:build',
-        'templates:build',
+        'fonts:build',
+        'js:lib:build',
         'js:app:build',
         'css:build',
-        'fonts:build'
+        'templates:build'
     ]
 );
 
