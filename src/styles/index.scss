@@ -11,4 +11,5 @@ $stylesDir: './styles';
 @import 'modules/_header';
 @import 'modules/_footer';
 
-@import 'components/';
+@import 'components/todos/_todo-list';
+@import 'components/todos/_todo-item';
