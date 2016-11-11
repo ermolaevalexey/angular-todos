@@ -19,6 +19,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-dest": "^0.2.3",
     "gulp-if": "^2.0.2",
+    "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0"
   }
