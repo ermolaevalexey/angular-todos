@@ -5,10 +5,10 @@
 	<title>Todo-app</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
-<body>
+<body ng-controller="TodoListController as $ctrl">
 	<header>Boo</header>
-		<h1>Hello bitches!</h1>
-        <h2 ng-controller="TodoListController as $ctrl">
+		<h1>Hello!</h1>
+        <h2>
             {{$ctrl.hello}}
         </h2>
         <todo-list></todo-list>
