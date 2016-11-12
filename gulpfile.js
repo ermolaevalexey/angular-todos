@@ -29,6 +29,12 @@ gulp.task('js:app:build', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('js:app:templates', function() {
+    return gulp.src(config.paths.src.js.appTemplates)
+        .pipe(gulp.dest(config.paths.build.js.appTemplates))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('js:lib:build', function() {
     return gulp.src(config.paths.src.js.lib)
         .pipe(gulp.dest(config.paths.build.js.lib))
@@ -72,6 +78,7 @@ gulp.task('build',
         'clean:build',
         'fonts:build',
         'js:lib:build',
+        'js:app:templates',
         'js:app:build',
         'css:build',
         'templates:build'

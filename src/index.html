@@ -8,8 +8,12 @@
 <body>
 	<header>Boo</header>
 		<h1>Hello bitches!</h1>
+        <h2 ng-controller="TodoListController as $ctrl">
+            {{$ctrl.hello}}
+        </h2>
+        <todo-list></todo-list>
 	<footer>Moo</footer>
     <script src="scripts/lib/angular.min.js"></script>
-    <script src="scripts/todo-app/index.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

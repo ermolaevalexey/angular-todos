@@ -4,7 +4,8 @@ var _paths = {
     build: {
         html: 'bundle/',
         js: {
-            app: 'bundle/scripts/todo-app/',
+            app: 'bundle/scripts/',
+            appTemplates: 'src/scripts/todo-app/',
             lib: 'bundle/scripts/lib/'
         },
         css: 'bundle/styles/',
@@ -14,6 +15,7 @@ var _paths = {
         html: 'src/*.html',
         js: {
             app: 'src/scripts/todo-app/index.js',
+            appTemplates: 'src/scripts/todo-app/**/*.html',
             lib: _libDir + '/angular/angular.min.js'
         },
         css: 'src/styles/index.scss',
