@@ -8,12 +8,29 @@
         var vm = this;
 
         vm.hello = 'Hello sucker!';
-        vm.todos = ['go shop', 'check comp', 'foo', 'bar'];
+        vm.todos = [
+            {
+                id: 1,
+                title: 'go shop'
+            },
+            {
+                id: 2,
+                title: 'check comp'
+            },
+            {
+                id: 3,
+                title: 'foo'
+            },
+            {
+                id: 4,
+                title: 'bar'
+            }
+        ];
 
         vm.removeTodo = function (id) {
             console.log(id);
-            vm.todos = _.reject(vm.todos, function(item, index) {
-                return index === id;
+            vm.todos = _.reject(vm.todos, function(item) {
+                return item.id === id;
             });
             console.log(vm.todos);
         };
