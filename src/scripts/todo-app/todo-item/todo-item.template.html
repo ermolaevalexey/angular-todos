@@ -1,4 +1,4 @@
 <li>
     {{todo.title}}
-    <button ng-click="$ctrl.removeTodo(todo.id)">&times;</button>
+    <button ng-click="$ctrl.removeTodo(todo.id); $onDestroy()">&times;</button>
 </li>
