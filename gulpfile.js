@@ -1,10 +1,10 @@
 var browserSync = require('browser-sync'),
-    del = require('del'),
 	gulp = require('gulp'),
 	gulpClean = require('gulp-clean-css'),
 	gulpConcat = require('gulp-concat'),
 	gulpDest = require('gulp-dest'),
 	gulpIf = require('gulp-if'),
+    gulpRmRf = require('gulp-rimraf'),
 	gulpRigger = require('gulp-rigger'),
 	gulpSass = require('gulp-sass'),
 	gulpSourceMaps = require('gulp-sourcemaps'),
@@ -63,7 +63,7 @@ gulp.task('run:server', function () {
 });
 
 gulp.task('clean:build', function () {
-    del(config.paths.clean);
+    gulpRmRf(config.paths.clean);
 });
 
 

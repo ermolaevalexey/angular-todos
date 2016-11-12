@@ -14,13 +14,13 @@
   },
   "devDependencies": {
     "browser-sync": "^2.17.5",
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
     "gulp-concat": "^2.6.0",
     "gulp-dest": "^0.2.3",
     "gulp-if": "^2.0.2",
     "gulp-rigger": "^0.5.8",
+    "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0"
