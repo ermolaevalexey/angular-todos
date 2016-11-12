@@ -4,10 +4,10 @@ var _paths = {
     build: {
         html: 'bundle/',
         js: {
-            app: 'bundle/js/',
-            lib: 'bundle/js/lib/'
+            app: 'bundle/scripts/todo-app/',
+            lib: 'bundle/scripts/lib/'
         },
-        css: 'bundle/css/',
+        css: 'bundle/styles/',
         fonts: 'bundle/fonts/'
     },
     src: {
