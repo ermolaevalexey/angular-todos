@@ -16,7 +16,11 @@ var _paths = {
         js: {
             app: 'src/scripts/todo-app/index.js',
             appTemplates: 'src/scripts/todo-app/**/*.html',
-            lib: _libDir + '/angular/angular.min.js'
+            lib: 'src/scripts/lib/vendor.js'
+            /*[
+                _libDir + '/lodash/core.min.js',
+                _libDir + '/angular/angular.min.js'
+            ]*/
         },
         css: 'src/styles/index.scss',
         fonts: 'src/fonts/**.*'

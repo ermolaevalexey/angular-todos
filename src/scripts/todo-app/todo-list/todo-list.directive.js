@@ -6,7 +6,13 @@
     function TodoListDirective() {
         return {
             restrict: 'E',
-            templateUrl: '/scripts/todo-app/todo-list/todo-list.template.html'
+            controller: 'TodoListController',
+            controllerAs: '$ctrl',
+            transclude: true,
+            templateUrl: '/scripts/todo-app/todo-list/todo-list.template.html',
+            link: function(scope, el, attrs, ctrl, transclude) {
+                el.find('ul').append(transclude());
+            }
         }
     }
 

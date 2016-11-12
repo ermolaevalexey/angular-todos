@@ -73,12 +73,20 @@ gulp.task('clean:build', function () {
     gulpRmRf(config.paths.clean);
 });
 
+gulp.task('build:angular', function() {
+    return gulp.src(config.paths.src.js.lib)
+        .pipe(gulpRigger())
+        .pipe(gulpSourceMaps.init())
+        .pipe(gulpUglify())
+        .pipe(gulpSourceMaps.write())
+        .pipe(gulp.dest(config.paths.build.js.lib));
+});
 
 gulp.task('build',
     [
         'clean:build',
         'fonts:build',
-        'js:lib:build',
+        'build:angular',
         'js:app:templates',
         'js:app:build',
         'css:build',

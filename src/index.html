@@ -5,15 +5,14 @@
 	<title>Todo-app</title>
     <link rel="stylesheet" href="styles/index.css">
 </head>
-<body ng-controller="TodoListController as $ctrl">
+<body ng-controller="TodoListController as vm">
 	<header>Boo</header>
 		<h1>Hello!</h1>
-        <h2>
-            {{$ctrl.hello}}
-        </h2>
-        <todo-list></todo-list>
+        <todo-list>
+            <todo-item ng-repeat="(key, todo) in vm.todos"></todo-item>
+        </todo-list>
 	<footer>Moo</footer>
-    <script src="scripts/lib/angular.min.js"></script>
+    <script src="scripts/lib/vendor.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
