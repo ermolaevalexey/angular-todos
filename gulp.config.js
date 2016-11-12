@@ -5,7 +5,7 @@ var _paths = {
         html: 'bundle/',
         js: {
             app: 'bundle/scripts/',
-            appTemplates: 'src/scripts/todo-app/',
+            appTemplates: 'bundle/scripts/todo-app/',
             lib: 'bundle/scripts/lib/'
         },
         css: 'bundle/styles/',
@@ -22,9 +22,10 @@ var _paths = {
         fonts: 'src/fonts/**.*'
     },
     watch: {
-        html: 'src/**/*.html',
+        html: 'src/*.html',
         js: {
             app: 'src/scripts/todo-app/**/*.js',
+            appTemplates: 'src/scripts/todo-app/**/*.html',
             lib: _libDir
         },
         css: 'src/styles/**/*.scss',

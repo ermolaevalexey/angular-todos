@@ -62,6 +62,7 @@ gulp.task('watch', function(){
     gulp.watch(config.paths.watch.css, ['css:build']);
     gulp.watch(config.paths.watch.html, ['templates:build']);
     gulp.watch(config.paths.watch.fonts, ['fonts:build']);
+    gulp.watch(config.paths.watch.js.appTemplates, ['js:app:templates']);
 });
 
 gulp.task('run:server', function () {
