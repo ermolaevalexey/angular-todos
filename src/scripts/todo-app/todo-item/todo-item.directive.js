@@ -9,12 +9,14 @@
             restrict: 'E',
             require: '^todoList',
             transclude: true,
+            scope: false,
             templateUrl: '/scripts/todo-app/todo-item/todo-item.template.html',
             link: function(scope, el, attrs, ctrl, transclude) {
                 console.log(scope);
-                scope.$onDestroy = function() {
+                /*scope.$onDestroy = function() {
+                    console.log(el);
                     el.remove();
-                };
+                };*/
             }
         }
     }

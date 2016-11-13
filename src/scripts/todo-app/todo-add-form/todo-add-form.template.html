@@ -1,4 +1,4 @@
-<form action="">
-    <input type="text">
+<form ng-submit="$ctrl.addTodo(todo.title)">
+    <input type="text" ng-model="todo.title">
     <button>Добавить тудушку</button>
 </form>

@@ -10,7 +10,7 @@
 		<h1>Hello!</h1>
         <todo-add-form></todo-add-form>
         <todo-list>
-            <todo-item ng-repeat="todo in vm.todos"></todo-item>
+            <todo-item ng-if="vm.todos.length" ng-repeat="todo in vm.todos"></todo-item>
         </todo-list>
 	<footer>Moo</footer>
     <script src="scripts/lib/vendor.js"></script>
