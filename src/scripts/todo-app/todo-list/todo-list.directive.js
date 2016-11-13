@@ -1,4 +1,5 @@
 (function(w) {
+    'use strict';
 
     angular.module('todoApp')
         .directive('todoList', TodoListDirective);
