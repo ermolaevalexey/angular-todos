@@ -9,8 +9,6 @@
     function TodoListController(_, TodoListService) {
         var vm = this;
 
-        vm.hello = 'Hello sucker!';
-
         vm.todos = [];
 
         vm.$onInit = function() {
