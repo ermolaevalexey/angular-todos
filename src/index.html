@@ -8,6 +8,7 @@
 <body ng-controller="TodoListController as vm">
 	<header>Boo</header>
 		<h1>Hello!</h1>
+        <todo-add-form></todo-add-form>
         <todo-list>
             <todo-item ng-repeat="todo in vm.todos"></todo-item>
         </todo-list>
