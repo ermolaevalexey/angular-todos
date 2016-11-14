@@ -1,19 +1,20 @@
-<form name="TodoEdit"
+<form class="adding-form adding-form--edit" name="TodoEdit"
       ng-submit="TodoEdit.$valid && toggleEditMode(); vm.editTodo(todo.id, todo.title);" novalidate>
-	<input type="text"
+	<input class="adding-form__input"
+           type="text"
 	       name="NewTodoTitle"
 	       ng-model="todo.title"
 	       ng-required="true"
 	       ng-minlength="6">
-	<button>Редактировать</button>
+	<button class="button button--submit adding-form__button">Редактировать</button>
 	
-	<div ng-messages="TodoEdit.TodoTitle.$error"
-	     style="color:maroon" role="alert"
-	     ng-if="!TodoEdit.$valid && TodoEdit.$submitted">
+	<div class="adding-form adding-form__error-wrapper"
+        ng-messages="TodoEdit.TodoTitle.$error"
+	    ng-if="!TodoEdit.$valid && TodoEdit.$submitted">
 		
-		<div ng-if="TodoEdit.NewTodoTitle.$error.required"
+		<div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.required"
 		     ng-message="required">You did not enter a field</div>
-		<div ng-if="TodoEdit.NewTodoTitle.$error.minlength"
+		<div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.minlength"
 		     ng-message="minlength">Your field is too short</div>
 	</div>
 </form>

@@ -1,17 +1,19 @@
-<form name="TodoAddForm" ng-submit="TodoAddForm.$valid && vm.addTodo(todo.title);" novalidate>
-    <input name="TodoTitle" type="text"
+<form class="adding-form adding-form--addnew"
+      name="TodoAddForm" ng-submit="TodoAddForm.$valid && vm.addTodo(todo.title);"
+      novalidate>
+    <input class="adding-form__input"
+           name="TodoTitle" type="text"
            ng-model="todo.title"
            ng-required="true"
            ng-minlength="6">
-	<button>Добавить тудушку</button>
+	<button class="button button--submit adding-form__button">Добавить тудушку</button>
 	
-	<div ng-messages="TodoAddForm.TodoTitle.$error"
-	     style="color:maroon" role="alert"
+	<div class="adding-form adding-form__error-wrapper"
+         ng-messages="TodoAddForm.TodoTitle.$error"
 	     ng-if="!TodoAddForm.$valid && TodoAddForm.$submitted">
-		
-		<div ng-if="TodoAddForm.TodoTitle.$error.required"
+		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.required"
 		     ng-message="required">You did not enter a field</div>
-		<div ng-if="TodoAddForm.TodoTitle.$error.minlength"
+		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.minlength"
 		     ng-message="minlength">Your field is too short</div>
 	</div>
 </form>
