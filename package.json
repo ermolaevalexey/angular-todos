@@ -12,7 +12,8 @@
   "dependencies": {
     "angular": "^1.5.8",
     "lodash": "^4.16.6",
-    "ngstorage": "^0.3.11"
+    "ngstorage": "^0.3.11",
+    "normalize-scss": "^6.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.17.5",
