@@ -1,4 +1,7 @@
-<form ng-submit="$ctrl.addTodo(todo.title)">
-    <input type="text" ng-model="todo.title">
-    <button>Добавить тудушку</button>
+<form name="TodoAddForm" ng-submit="TodoAddForm.$valid && vm.addTodo(todo.title)" novalidate>
+    <input name="TodoTitle" type="text"
+           ng-model="todo.title"
+           ng-required="true"
+           ng-minlength="6">
+	<button>Добавить тудушку</button>
 </form>
