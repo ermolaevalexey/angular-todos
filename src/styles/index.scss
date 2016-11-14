@@ -10,6 +10,7 @@ $stylesDir: './styles';
 @import 'shared/_links';
 
 @import 'modules/_header';
+@import 'modules/_app-container';
 @import 'modules/_footer';
 
 @import 'components/todos/_todo-list';
