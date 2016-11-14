@@ -4,10 +4,14 @@
            ng-required="true"
            ng-minlength="6">
 	<button>Добавить тудушку</button>
+	
 	<div ng-messages="TodoAddForm.TodoTitle.$error"
 	     style="color:maroon" role="alert"
 	     ng-if="!TodoAddForm.$valid && TodoAddForm.$submitted">
-		<div ng-if="TodoAddForm.TodoTitle.$error.required" ng-message="required">You did not enter a field</div>
-		<div ng-if="TodoAddForm.TodoTitle.$error.minlength" ng-message="minlength">Your field is too short</div>
+		
+		<div ng-if="TodoAddForm.TodoTitle.$error.required"
+		     ng-message="required">You did not enter a field</div>
+		<div ng-if="TodoAddForm.TodoTitle.$error.minlength"
+		     ng-message="minlength">Your field is too short</div>
 	</div>
 </form>

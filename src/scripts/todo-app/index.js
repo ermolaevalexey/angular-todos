@@ -6,3 +6,4 @@
 //= todo-list/todo-list.directive.js
 
 //= todo-item/todo-item.directive.js
+//= todo-item/todo-item-edit.directive.js

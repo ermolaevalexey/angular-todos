@@ -1,7 +1,15 @@
 <li class="todo-item" ng-class="{'todo-item--completed': todo.completed}">
-    <input type="checkbox"
-           ng-model="todo.completed"
-           ng-checked="todo.completed">
-    {{todo.title}}
+	<div ng-show="!editMode">
+		<input type="checkbox"
+		       ng-model="todo.completed"
+		       ng-checked="todo.completed">
+		<div class="todo-title">
+			{{todo.title}}
+		</div>
+	</div>
+	<a href="#" class="edit-todo" ng-click="toggleEditMode()">
+		{{editMode ? 'Закрыть' : 'Редактировать'}}
+	</a>
     <button ng-click="vm.removeTodo(todo.id)">&times;</button>
+	<todo-item-edit ng-show="editMode"></todo-item-edit>
 </li>

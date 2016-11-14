@@ -10,6 +10,7 @@
         var service = {
             get: get,
             add: add,
+	        edit: edit,
             remove: remove
         };
 
@@ -28,8 +29,18 @@
                     JSON.parse(JSON.stringify(new Todo(title)))
                 )
             );
-            console.log(deferred);
             return deferred.promise;
+        }
+        
+        function edit(id, newTitle) {
+        	var deferred = $q.defer();
+        	deferred.resolve(function() {
+        		var todo = _.findIndex($localStorage.todos, function(item) {
+			        return item.id === id;
+		        });
+        		console.log(todo);
+	        });
+	        return deferred.promise;
         }
 
         function get() {
@@ -40,9 +51,13 @@
 
         function remove(id) {
             console.log(id);
-            $localStorage.todos = _.reject($localStorage.todos, function(item) {
-                return item.id === id;
-            });
+	        var deferred = $q.defer();
+	        deferred.resolve(
+		        $localStorage.todos = _.reject($localStorage.todos, function(item) {
+			        return item.id === id;
+		        })
+	        );
+	        return deferred.promise;
         }
 
         return service;

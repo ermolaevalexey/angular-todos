@@ -13,6 +13,7 @@
 
         vm.$onInit = onInit;
         vm.addTodo = addTodo;
+        vm.editTodo = editTodo;
         vm.removeTodo = removeTodo;
 
         function onInit() {
@@ -36,10 +37,25 @@
                 console.log(reason);
             });
         }
+        
+        function editTodo(id, title) {
+        	TodoListService.edit(id, title)
+		    .then(function() {
+		    	onInit();
+		    })
+		    .catch(function(reason) {
+			    console.log(reason)
+		    });
+        }
 
         function removeTodo(id) {
-           TodoListService.remove(id);
-           vm.todos = $localStorage.todos;
+           TodoListService.remove(id)
+	       .then(function(){
+		       onInit();
+	       })
+	       .catch(function(reason) {
+	       	    console.log(reason);
+	       });
            console.log(vm.todos);
         }
     }

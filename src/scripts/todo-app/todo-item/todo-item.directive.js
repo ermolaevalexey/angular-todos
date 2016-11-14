@@ -12,7 +12,10 @@
             scope: false,
             templateUrl: '/scripts/todo-app/todo-item/todo-item.template.html',
             link: function(scope, el, attrs, ctrl, transclude) {
-                
+                scope.editMode = false;
+                scope.toggleEditMode = function() {
+                	scope.editMode = !scope.editMode;
+                }
             }
         }
     }

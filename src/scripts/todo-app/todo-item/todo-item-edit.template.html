@@ -1,0 +1,19 @@
+<form name="TodoEdit"
+      ng-submit="TodoEdit.$valid && toggleEditMode(); vm.editTodo(todo.id, todo.title);" novalidate>
+	<input type="text"
+	       name="NewTodoTitle"
+	       ng-model="todo.title"
+	       ng-required="true"
+	       ng-minlength="6">
+	<button>Редактировать</button>
+	
+	<div ng-messages="TodoEdit.TodoTitle.$error"
+	     style="color:maroon" role="alert"
+	     ng-if="!TodoEdit.$valid && TodoEdit.$submitted">
+		
+		<div ng-if="TodoEdit.NewTodoTitle.$error.required"
+		     ng-message="required">You did not enter a field</div>
+		<div ng-if="TodoEdit.NewTodoTitle.$error.minlength"
+		     ng-message="minlength">Your field is too short</div>
+	</div>
+</form>
