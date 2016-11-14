@@ -4,9 +4,9 @@
     angular.module('todoApp')
         .controller('TodoListController', TodoListController);
 
-    TodoListController.$inject = ['_', 'TodoListService', '$localStorage'];
+    TodoListController.$inject = ['$scope', '_', 'TodoListService', '$localStorage'];
 
-    function TodoListController(_, TodoListService, $localStorage) {
+    function TodoListController($scope, _, TodoListService, $localStorage) {
         var vm = this;
 
         vm.todos = [];
@@ -29,6 +29,8 @@
             .then(function() {
                 onInit();
                 console.log('added', vm.todos);
+	            $scope.TodoAddForm.$setPristine();
+	            $scope.todo.title = '';
             })
             .catch(function(reason) {
                 console.log(reason);
