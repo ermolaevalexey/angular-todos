@@ -1,4 +1,4 @@
-<li class="todo-item" ng-class="{'todo-item--completed': todo.completed}">
+<li class="todo-item" ng-class="{'todo-item--completed': todo.completed, 'todo-item--editing': editMode}">
 	<div class="todo-item__main-layout" ng-show="!editMode">
 		<input class="todo-item__state-toggler" type="checkbox"
 		       ng-model="todo.completed"
