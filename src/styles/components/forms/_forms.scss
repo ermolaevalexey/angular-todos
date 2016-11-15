@@ -38,4 +38,13 @@
 			margin-right: 1rem;
 		}
 	}
+	
+	&__error-wrapper {
+		padding: .5rem 0;
+	}
+	
+	&__error {
+		color: $errorColor;
+		font-weight: bold;
+	}
 }

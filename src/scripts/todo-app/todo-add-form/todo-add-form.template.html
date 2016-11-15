@@ -12,8 +12,8 @@
          ng-messages="TodoAddForm.TodoTitle.$error"
 	     ng-if="!TodoAddForm.$valid && TodoAddForm.$submitted">
 		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.required"
-		     ng-message="required">You did not enter a field</div>
+		     ng-message="required">Вы ничего не ввели</div>
 		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.minlength"
-		     ng-message="minlength">Your field is too short</div>
+		     ng-message="minlength">Слишком короткий текст, введите хотя бы 6 символов</div>
 	</div>
 </form>

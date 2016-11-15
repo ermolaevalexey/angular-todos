@@ -1,13 +1,14 @@
-@include font-face("Open Sans", '#{$fontsDir}/opensans-bold-webfont', bold, normal);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-bolditalic-webfont', bold, italic);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-extrabold-webfont', 900, italic);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-italic-webfont', normal, italic);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-light-webfont', 100, normal);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-lightitalic-webfont', 100, italic);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-regular-webfont', normal, normal);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-semibold-webfont', 500, normal);
-@include font-face("Open Sans", '#{$fontsDir}/opensans-semibolditalic-webfont', 500, italic);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-bold-webfont', bold, normal);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-bolditalic-webfont', bold, italic);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-extrabold-webfont', 900, italic);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-italic-webfont', normal, italic);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-light-webfont', 100, normal);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-lightitalic-webfont', 100, italic);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-regular-webfont', normal, normal);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-semibold-webfont', 500, normal);
+//@include font-face("Open Sans", '#{$fontsDir}/opensans-semibolditalic-webfont', 500, italic);
 
+//Cyrillic support
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,latin-ext');
 
 
