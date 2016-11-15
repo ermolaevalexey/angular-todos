@@ -1,5 +1,25 @@
-$baseFontSize: 1rem;
+//strings
+$stylesDir: './styles';
 $fontsDir: '../../fonts';
 $font-family: 'Open Sans';
+
+//units
+$baseFontSize: 1rem;
 $baseWidth: 1000px;
+
+//hex
 $baseColor: #585858;
+$baseGray: #cccccc;
+$baseWhite: #ffffff;
+
+$buttonSubmitBg: #337ab7;
+$buttonSubmitHoverBg: #286090;
+
+$buttonRejectBg: #d9534f;
+$buttonRejectHoverBg: #c9302c;
+
+$buttonWarningBg: #f0ad4e;
+$buttonWarningHoverBg: #ec971f;
+
+$buttonEditBg: #5bc0de;
+$buttonEditHoverBg: #31b0d5;

@@ -1,5 +1,3 @@
-$stylesDir: './styles';
-
 @import 'mixins/_mixins';
 
 @import "common/_variables";
@@ -13,5 +11,6 @@ $stylesDir: './styles';
 @import 'modules/_app-container';
 @import 'modules/_footer';
 
+@import 'components/forms/_forms';
 @import 'components/todos/_todo-list';
 @import 'components/todos/_todo-item';

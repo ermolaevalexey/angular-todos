@@ -1,0 +1,44 @@
+.button {
+	display: inline-block;
+	border: none;
+	color: $baseWhite;
+	padding: .3rem .6rem;
+	cursor: pointer;
+	text-decoration: none;
+	background-color: $baseGray;
+	@include _border-radius(3px);
+	
+	&--submit {
+		background-color: $buttonSubmitBg;
+	
+		&:hover {
+			background-color: $buttonSubmitHoverBg;
+		}
+	}
+	
+	&--reject {
+		background-color: $buttonRejectBg;
+		
+		&:hover {
+			background-color: $buttonRejectHoverBg;
+		}
+	}
+	
+	&--toggle {
+		background-color: $buttonEditBg;
+		
+		&:hover {
+			background-color: $buttonEditHoverBg;	
+		}
+	}
+	
+	&--warning {
+		background-color: $buttonWarningBg;
+		
+		&:hover {
+			background-color: $buttonWarningHoverBg;
+		}
+	}
+	
+	
+}
