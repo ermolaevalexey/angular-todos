@@ -1,10 +1,26 @@
 .adding-form {
+	font-size: 0;
 	width: 100%;
 	&__input {
 		display: inline-block;
 		border: .1rem solid $baseGray;
 		padding: .3rem;
-		width: 70%;
 		@include _border-radius(3px);
+	}
+	
+	&--addnew {
+		margin-bottom: 2rem;
+	}
+	
+	&--addnew & {
+		
+		&__button {
+			width: 20%;
+		}
+		
+		&__input {
+			width: 77%;
+			margin-right: 1rem;
+		}
 	}
 }

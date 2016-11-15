@@ -1,0 +1,10 @@
+.todo-list {
+	todo-item {
+		display: block;
+		border-bottom: .1rem solid $baseGray;
+		
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}

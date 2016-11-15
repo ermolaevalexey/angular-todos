@@ -1,5 +1,35 @@
 .todo-item {
-    &--completed {
-        text-decoration: line-through;
+	position: relative;
+	padding: 1rem 0 1rem;
+	font-size: 0;
+	
+    &--completed & {
+		&__todo-title {
+			text-decoration: line-through;
+			color: $baseGray;
+		}
     }
+	
+	&__main-layout {
+		width: 60%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	&__state-toggler {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 2rem;
+	}
+	
+	&__actions-layout {
+		width: 40%;
+		display: inline-block;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	&__state-toggler, &__todo-title, &__edit-todo-btn {
+		display: inline-block;
+	}
 }
