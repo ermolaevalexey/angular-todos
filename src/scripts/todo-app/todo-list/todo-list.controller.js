@@ -15,6 +15,9 @@
         vm.addTodo = addTodo;
         vm.editTodo = editTodo;
         vm.removeTodo = removeTodo;
+        
+        vm.sortTodosByDone = sortTodosByDone;
+        vm.removeCompleted = removeCompleted;
 
         function onInit() {
             TodoListService.get()
@@ -58,6 +61,29 @@
 	       });
            console.log(vm.todos);
         }
+	
+	    function sortTodosByDone() {
+		    vm.todos = _.sortBy(vm.todos, function (item) {
+			    return item.completed;
+		    });
+		    console.log(vm.todos);
+	    }
+	    
+	    function removeCompleted() {
+	    	vm.todos
+			.filter(function(item) {
+			    return item.completed;
+		    })
+			.map(function(item) {
+			    TodoListService.remove(item.id)
+				.then(function(){
+					onInit();
+				})
+				.catch(function(reason) {
+				    console.log(reason);
+				});
+		    });
+	    }
     }
 
 })(window);
