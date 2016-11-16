@@ -38,8 +38,7 @@
         		var todo = _.findIndex($localStorage.todos, function(item) {
 			        return item.id === id;
 		        });
-                todo.title = newTitle;
-        		console.log(todo);
+		        $localStorage.todos[todo].title = newTitle;
 	        });
 	        return deferred.promise;
         }
