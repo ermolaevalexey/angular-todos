@@ -1,5 +1,6 @@
 .todo-filter {
 	font-weight: bold;
+	@include selection();
 	&--active {
 		background-color: $buttonWarningHoverBg;
 		color: darken($baseColor, 15%);

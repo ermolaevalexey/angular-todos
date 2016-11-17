@@ -48,3 +48,10 @@
 	-moz-border-radius:$value;
 	border-radius: $value;
 }
+
+@mixin selection($selection: none) {
+	-webkit-user-select: $selection;
+	-moz-user-select: $selection;
+	-ms-user-select: $selection;
+	user-select: $selection;
+}
