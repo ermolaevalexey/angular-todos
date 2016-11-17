@@ -6,8 +6,7 @@
 	
 	function todoFilters() {
 		return {
-			controller: 'TodoFiltersController',
-			controllerAs: '$tdfCtrl',
+			restrict: 'E',
 			templateUrl: '/scripts/todo-app/todo-filters/todo-filters.template.html'
 		}
 	}

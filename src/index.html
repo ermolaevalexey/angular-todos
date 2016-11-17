@@ -13,7 +13,9 @@
         <todo-add-form></todo-add-form>
 	    <todo-filters></todo-filters>
         <todo-list>
-            <todo-item ng-if="vm.todos.length" ng-repeat="todo in vm.todos"></todo-item>
+            <todo-item ng-if="vm.todos.length"
+                       ng-repeat="todo in vm.todos"
+            ></todo-item>
         </todo-list>
     </section>
     <script src="scripts/lib/vendor.js"></script>

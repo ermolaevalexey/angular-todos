@@ -4,9 +4,9 @@
     angular.module('todoApp')
         .controller('TodoListController', TodoListController);
 
-    TodoListController.$inject = ['$scope', '_', 'TodoListService', '$localStorage'];
+    TodoListController.$inject = ['$scope', '_', 'TodoListService', '$localStorage', '$filter'];
 
-    function TodoListController($scope, _, TodoListService, $localStorage) {
+    function TodoListController($scope, _, TodoListService, $localStorage, $filter) {
         var vm = this;
 
         vm.todos = [];
@@ -18,11 +18,18 @@
         
         vm.sortTodosByDone = sortTodosByDone;
         vm.removeCompleted = removeCompleted;
+        vm.toggleFilter = toggleFilter;
+        
+        vm.activeFilter = {
+        	completed: false
+        };
 
         function onInit() {
+        	console.log($scope);
             TodoListService.get()
             .then(function(data) {
                 vm.todos = data;
+	            sortTodosByDone();
             }).catch(function(reason) {
                 console.log(reason);
             });
@@ -83,6 +90,19 @@
 				    console.log(reason);
 				});
 		    });
+	    }
+	    
+	    function toggleFilter() {
+	    	if (vm.activeFilter.completed) {
+			    vm.todos = vm.todos
+				    .filter(function(item) {
+					    if (item.completed === vm.activeFilter.completed) {
+						    return item;
+					    }
+				    });
+		    } else {
+		    	onInit();
+		    }
 	    }
     }
 
