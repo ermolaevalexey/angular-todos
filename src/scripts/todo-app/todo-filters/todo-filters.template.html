@@ -1,6 +1,6 @@
-<label class="button">
-	<input type="checkbox"
+<label class="button todo-filter" ng-class="{'todo-filter--active': vm.activeFilter.completed}">
+	<input type="checkbox" class="todo-filter__toggler"
 	       ng-model="vm.activeFilter.completed"
 			ng-click="vm.toggleFilter()">
-	показать завершенные
+	Показать завершенные
 </label>

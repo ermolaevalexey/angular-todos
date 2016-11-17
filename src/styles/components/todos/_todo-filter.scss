@@ -1,0 +1,24 @@
+.todo-filter {
+	font-weight: bold;
+	&--active {
+		background-color: $buttonWarningHoverBg;
+		color: darken($baseColor, 15%);
+		font-weight: bold;
+		vertical-align: middle;
+		position: relative;
+		padding-right: 1.5rem;
+		&:after {
+			content: '×';
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			right: .3rem;
+			height: 1rem;
+			position: absolute;
+			vertical-align: middle;
+		}
+	}
+	&__toggler {
+		display: none;
+	}
+}
