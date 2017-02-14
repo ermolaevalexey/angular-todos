@@ -1,20 +1,20 @@
 <form class="adding-form adding-form--edit" name="TodoEdit"
-      ng-submit="TodoEdit.$valid && toggleEditMode(); vm.editTodo(todo.id, todo.title);" novalidate>
-	<input class="adding-form__input"
-           type="text"
-	       name="NewTodoTitle"
-	       ng-model="todo.title"
-	       ng-required="true"
-	       ng-minlength="6">
-	<button class="button button--submit adding-form__button">Редактировать</button>
-	
-	<div class="adding-form adding-form__error-wrapper"
-        ng-messages="TodoEdit.TodoTitle.$error"
-	    ng-if="!TodoEdit.$valid && TodoEdit.$submitted">
-		
-		<div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.required"
-		     ng-message="required">Вы ничего не ввели</div>
-		<div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.minlength"
-		     ng-message="minlength">Слишком короткий текст, введите хотя бы 6 символов</div>
-	</div>
+  ng-submit="TodoEdit.$valid && toggleEditMode(); vm.editTodo(todo.id, todo.title);" novalidate>
+
+  <input class="adding-form__input" type="text" name="NewTodoTitle"
+    ng-model="todo.title" ng-required="true" ng-minlength="6">
+
+  <button class="button button--submit adding-form__button">Редактировать</button>
+
+  <div class="adding-form adding-form__error-wrapper"
+    ng-messages="TodoEdit.TodoTitle.$error" ng-if="!TodoEdit.$valid && TodoEdit.$submitted">
+
+    <div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.required"
+    ng-message="required">Вы ничего не ввели</div>
+
+    <div class="adding-form__error" ng-if="TodoEdit.NewTodoTitle.$error.minlength"
+    ng-message="minlength">Слишком короткий текст, введите хотя бы 6 символов</div>
+
+  </div>
+
 </form>

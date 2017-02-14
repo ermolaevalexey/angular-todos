@@ -1,19 +1,24 @@
-<form class="adding-form adding-form--addnew"
-      name="TodoAddForm" ng-submit="TodoAddForm.$valid && vm.addTodo(todo.title);"
-      novalidate>
-    <input class="adding-form__input"
-           name="TodoTitle" type="text"
-           ng-model="todo.title"
-           ng-required="true"
-           ng-minlength="6">
-	<button class="button button--submit adding-form__button">Добавить тудушку</button>
-	
-	<div class="adding-form adding-form__error-wrapper"
-         ng-messages="TodoAddForm.TodoTitle.$error"
-	     ng-if="!TodoAddForm.$valid && TodoAddForm.$submitted">
-		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.required"
-		     ng-message="required">Вы ничего не ввели</div>
-		<div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.minlength"
-		     ng-message="minlength">Слишком короткий текст, введите хотя бы 6 символов</div>
-	</div>
+<form class="adding-form adding-form--addnew" name="TodoAddForm"
+  ng-submit="TodoAddForm.$valid && vm.addTodo(todo.title);" novalidate>
+
+  <input class="adding-form__input" name="TodoTitle" type="text" ng-model="todo.title"
+    ng-required="true" ng-minlength="6">
+
+  <button class="button button--submit adding-form__button">Добавить тудушку</button>
+
+  <div class="adding-form adding-form__error-wrapper" ng-messages="TodoAddForm.TodoTitle.$error"
+    ng-if="!TodoAddForm.$valid && TodoAddForm.$submitted">
+
+    <div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.required"
+      ng-message="required">
+      Вы ничего не ввели
+    </div>
+
+    <div class="adding-form__error" ng-if="TodoAddForm.TodoTitle.$error.minlength"
+      ng-message="minlength">
+      Слишком короткий текст, введите хотя бы 6 символов
+    </div>
+
+  </div>
+  
 </form>

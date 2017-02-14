@@ -1,12 +1,15 @@
 .header-main {
+  
+  margin: 0 auto;
+  max-width: $baseWidth;
+  padding: 3rem;
+
+  &__title {
+    text-align: center;
     margin: 0 auto;
-    max-width: $baseWidth;
-	padding: 3rem;
-    &__title {
-		text-align: center;
-		margin: 0 auto;
-		font-size: 5rem;
-		font-weight: bold;
-		max-width: 50%;
-    }
+    font-size: 5rem;
+    font-weight: bold;
+    max-width: 50%;
+  }
+
 }

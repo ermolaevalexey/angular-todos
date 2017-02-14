@@ -1,50 +1,51 @@
 .adding-form {
-	font-size: 0;
-	width: 100%;
-	&__input {
-		display: inline-block;
-		border: .1rem solid $baseGray;
-		padding: .3rem;
-		@include _border-radius(3px);
-	}
-	
-	&--addnew {
-		margin-bottom: 2rem;
-	}
-	
-	&--edit {
-		display: inline-block;
-		vertical-align: middle;
-		width: 60%;
-		bottom: 0;
-		margin: auto;
-	}
-	
-	&--edit & {
-		&__input {
-			width: 70%;
-			margin-right: 1rem;
-		}
-	}
-	
-	&--addnew & {
-		
-		&__button {
-			width: 20%;
-		}
-		
-		&__input {
-			width: 77%;
-			margin-right: 1rem;
-		}
-	}
-	
-	&__error-wrapper {
-		padding: .5rem 0;
-	}
-	
-	&__error {
-		color: $errorColor;
-		font-weight: bold;
-	}
+  font-size: 0;
+  width: 100%;
+  
+  &__input {
+    display: inline-block;
+    border: .1rem solid $baseGray;
+    padding: .3rem;
+    @include _border-radius(3px);
+  }
+
+  &--addnew {
+    margin-bottom: 2rem;
+  }
+
+  &--edit {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &--edit & {
+    &__input {
+      width: 70%;
+      margin-right: 1rem;
+    }
+  }
+
+  &--addnew & {
+
+    &__button {
+      width: 20%;
+    }
+
+    &__input {
+      width: 77%;
+      margin-right: 1rem;
+    }
+  }
+
+  &__error-wrapper {
+    padding: .5rem 0;
+  }
+
+  &__error {
+    color: $errorColor;
+    font-weight: bold;
+  }
 }

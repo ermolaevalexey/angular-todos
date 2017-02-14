@@ -1,20 +1,28 @@
-<li class="todo-item" ng-class="{'todo-item--completed': todo.completed, 'todo-item--editing': editMode}">
-	<div class="todo-item__main-layout" ng-show="!editMode">
-		<input class="todo-item__state-toggler" type="checkbox"
-		       ng-model="todo.completed"
-		       ng-checked="todo.completed">
-		<div class="todo-item__todo-title">
-			{{todo.title}}
-		</div>
-	</div>
-	<div class="todo-item__actions-layout">
-		<a href="#" class="button button--toggle todo-item__edit-todo-btn"
-		   ng-class="{'button--warning': editMode}"
-		   ng-click="TodoEdit.$valid && toggleEditMode()">
-			{{editMode ? 'Закрыть' : 'Редактировать'}}
-		</a>
-		<button class="button button--reject todo-item__remove-todo-btn"
-		        ng-click="vm.removeTodo(todo.id)">&times;</button>
-	</div>
-	<todo-item-edit ng-show="editMode"></todo-item-edit>
+<li class="todo-item"
+  ng-class="{'todo-item--completed': todo.completed, 'todo-item--editing': editMode}">
+
+  <div class="todo-item__main-layout" ng-show="!editMode">
+
+    <input class="todo-item__state-toggler" type="checkbox" ng-model="todo.completed"
+      ng-checked="todo.completed">
+
+    <div class="todo-item__todo-title">
+      {{todo.title}}
+    </div>
+
+  </div>
+
+  <div class="todo-item__actions-layout">
+
+    <a href="#" class="button button--toggle todo-item__edit-todo-btn"
+      ng-class="{'button--warning': editMode}" ng-click="TodoEdit.$valid && toggleEditMode()">
+      {{editMode ? 'Закрыть' : 'Редактировать'}}
+    </a>
+
+    <button class="button button--reject todo-item__remove-todo-btn"
+      ng-click="vm.removeTodo(todo.id)">&times;</button>
+
+  </div>
+
+  <todo-item-edit ng-show="editMode"></todo-item-edit>
 </li>
